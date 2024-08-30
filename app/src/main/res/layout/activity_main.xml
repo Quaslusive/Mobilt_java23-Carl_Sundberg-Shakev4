@@ -7,105 +7,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
-        android:layout_width="366dp"
-        android:layout_height="33dp"
-        android:layout_centerVertical="true"
-        android:layout_margin="16dp"
-        android:indeterminate="false"
-        android:max="100"
-        android:progressTint="#E91010"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="219dp"
+        android:layout_width="0dp"
         android:layout_height="212dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="133dp"
-        android:contentDescription="@string/waird_ball"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="Weird Ball"
+        app:layout_constraintBottom_toTopOf="@+id/textViewFlatness"
+        app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
         app:srcCompat="@drawable/icon1" />
 
     <SeekBar
         android:id="@+id/seekBarX"
-        android:layout_width="364dp"
-        android:layout_height="14dp"
+        android:layout_width="340dp"
+        android:layout_height="34dp"
         android:padding="10dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
+        app:layout_constraintVertical_bias="0.634" />
 
     <SeekBar
         android:id="@+id/seekBarY"
-        android:layout_width="320dp"
-        android:layout_height="130dp"
+        android:layout_width="362dp"
+        android:layout_height="132dp"
         android:layout_marginStart="49dp"
         android:layout_marginEnd="39dp"
-        android:layout_marginBottom="388dp"
+        android:layout_marginBottom="468dp"
         android:progress="50"
         android:rotation="270"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <SeekBar
         android:id="@+id/seekBarZ"
         android:layout_width="340dp"
         android:layout_height="34dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textViewZ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewY"
-        app:layout_constraintStart_toEndOf="@+id/textViewX"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarX"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/textViewY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="168dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewZ"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarX" />
-
-    <TextView
-        android:id="@+id/textViewX"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="168dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewZ"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarX" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewIntro"
@@ -125,58 +71,93 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="177dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="10dp"
         android:autoText="false"
         android:fontFamily="sans-serif-black"
         android:padding="10dip"
         android:text="Flathet"
         android:textAllCaps="true"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarX"
+        app:layout_constraintBottom_toTopOf="@+id/displayX"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/displayX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="177dp"
-        android:layout_marginTop="3dp"
         android:layout_marginEnd="176dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="2dp"
         android:text="X"
         app:layout_constraintBottom_toTopOf="@+id/seekBarX"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFlatness"
         tools:text="X" />
 
     <TextView
         android:id="@+id/displayY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="114dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="53dp"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="376dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="504dp"
         android:text="Y"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarX"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewFlatness"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:text="Y" />
 
     <TextView
         android:id="@+id/displayZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="1dp"
         android:text="Z"
         app:layout_constraintBottom_toTopOf="@+id/seekBarZ"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="338dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="50dp"
+        app:constraint_referenced_ids="textViewX,textViewY,textViewZ"
+        app:flow_horizontalAlign="center"
+        app:flow_horizontalStyle="spread"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIntro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewZ"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextViewX"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="544dp" />
+
+    <TextView
+        android:id="@+id/textViewY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextViewY"
+        tools:layout_editor_absoluteX="-45dp"
+        tools:layout_editor_absoluteY="537dp" />
+
+    <TextView
+        android:id="@+id/textViewZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextViewZ"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="712dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
